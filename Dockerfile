@@ -13,4 +13,5 @@ RUN set -x && \
     yum-config-manager --add-repo http://download.mono-project.com/repo/centos/ && \
     yum install -y mono-complete fsharp
 
+ENTRYPOINT ["/bin/bash"]
 CMD ["fsharpi"]
