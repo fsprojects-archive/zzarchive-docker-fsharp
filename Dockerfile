@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-MAINTAINER Sebastian Fialka <sebastian.fialka@sebfia.net>
+FROM ubuntu:14.04
+MAINTAINER Henrik Feldt
 
 ENV MONO_VERSION 4.2.1.102
 ENV FSHARP_VERSION 4.0.0.4
