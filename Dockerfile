@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM buildpack-deps:trusty
 MAINTAINER Henrik Feldt
 
 ENV MONO_VERSION 4.2.1.102
