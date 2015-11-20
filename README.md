@@ -7,6 +7,6 @@ based on F#.
 
 The image contains the latest mono version with F#.
 
-# Versions used:
+# Dependency versions used:
+
 * Mono 4.2.1.102
-* F# 4.0.0.4
