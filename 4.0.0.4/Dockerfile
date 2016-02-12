@@ -10,6 +10,7 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/*
 
 ENV MONO_VERSION 4.2.1.102
+ENV MONO_THREADS_PER_CPU 50
 
 RUN apt-get -y update && \
     apt-get -y --no-install-recommends install mono-devel=$MONO_VERSION-0xamarin1 ca-certificates-mono=$MONO_VERSION-0xamarin1 && \
