@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA
 ENV MONO_THREADS_PER_CPU 50
 
 RUN apt-get -y update && \
-    apt-get -y --force-yes --no-install-recommends install nuget mono-devel ca-certificates-mono && \
+    apt-get -y --no-install-recommends install nuget mono-devel ca-certificates-mono && \
     rm -rf /var/lib/apt/lists/*
 
 ENV FSHARP_PREFIX /usr
