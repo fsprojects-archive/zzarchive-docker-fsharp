@@ -10,3 +10,4 @@ The image contains the latest mono version with F#.
 # Dependency versions used:
 
 * Mono 4.4.2.11
+* Mono 4.8.0.495
