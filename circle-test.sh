@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Thanks to https://github.com/influxdata/influxdata-docker
 set -e
 
 dir=.
