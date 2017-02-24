@@ -29,11 +29,11 @@ RUN curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz \
 
 # Trigger the population of the local package cache
 ENV NUGET_XMLDOC_MODE skip
-RUN mkdir warmup \
-    && cd warmup \
-    && dotnet new classlib --language F# \
-    && cd .. \
-    && rm -rf warmup \
-    && rm -rf /tmp/NuGetScratch
 
-ENTRYPOINT ["fsharpi"]
+# Download and extract the fsharp compiler.
+RUN curl -o /tmp/fsharp.compiler.tools.4.1.0.nupkg -L https://www.nuget.org/api/v2/package/FSharp.Compiler.Tools/4.1.0
+RUN apt-get update && apt-get install -y unzip
+RUN mkdir fsc && cd fsc && unzip /tmp/fsharp.compiler.tools.4.1.0.nupkg && cp build/netcoreapp1.0/fsc.dll /
+RUN rm -rf /fsc
+
+CMD ["dotnet", "fsc.dll"]
