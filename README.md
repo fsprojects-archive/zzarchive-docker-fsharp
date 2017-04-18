@@ -10,3 +10,11 @@ The image contains the latest mono version with F#.
 # Dependency versions used:
 
 * Mono 4.8.0.495
+
+## Maintainer(s)
+
+- [@haf](https://github.com/haf)
+- additional maintainers being discussed, place an issue on http://github.com/fsharp/fsharp if necessary
+
+The default maintainer account for projects under "fsprojects" is [@fsprojectsgit](https://github.com/fsprojectsgit) - F# Community Project Incubation Space (repo management)
+
