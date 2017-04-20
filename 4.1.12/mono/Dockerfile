@@ -13,7 +13,7 @@ RUN apt-get -y update && \
     apt-get -y --no-install-recommends install nuget mono-devel ca-certificates-mono && \
     rm -rf /var/lib/apt/lists/*
 
-ENV FSHARP_VERSION 4.1.0.1
+ENV FSHARP_VERSION 4.1.12
 ENV FSHARP_PREFIX=/usr \
     FSHARP_GACDIR=/usr/lib/mono/gac \
     FSHARP_BASENAME=fsharp-$FSHARP_VERSION \

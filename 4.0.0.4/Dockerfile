@@ -1,5 +1,5 @@
 FROM buildpack-deps:trusty
-MAINTAINER Henrik Feldt
+LABEL maintainer "Dave Curylo <curylod@asme.org>, Steve Desmond @stevedesmond_ca"
 
 ENV MONO_VERSION 4.8.0.495
 
