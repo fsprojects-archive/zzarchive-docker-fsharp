@@ -1,5 +1,5 @@
 FROM buildpack-deps:jessie-scm
-LABEL maintainer "Dave Curylo <curylod@asme.org>, Steve Desmond @stevedesmond_ca"
+LABEL maintainer "Dave Curylo <curylod@asme.org>, Steve Desmond <steve@stevedesmond.ca>"
 
 # Install .NET CLI dependencies
 RUN apt-get update \
