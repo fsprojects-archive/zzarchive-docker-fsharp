@@ -8,6 +8,21 @@ based on F#.
 The `mono` image contains the latest mono version with F#, whereas the `core`
 image contains the latest .NET Core SDK and runtime.
 
+You can choose between using a SDK image or a Runtime image. The Runtime image
+is a minimal image with only the dependencies needed to **run** your 
+already-compiled F# code, while the SDK image also has capabilities for 
+**compiling** F#.
+
+You can create runtime images by using a continuous integration services to
+build the software; reference `FSharp.Core` from your app/service and copy the
+final output into the Runtime container to create a container that contains
+just your compiled app.
+
+The up-side of doing it this way is a drastically reduced footprint of your
+image which translates to lower storage-costs and quicker deploys. When that
+bug hits the fan, you want to be able to quickly roll back your version or push
+a fix – which means you benefit from lower image sizes.
+
 # Dependency versions used:
 
 ## Mono Image
