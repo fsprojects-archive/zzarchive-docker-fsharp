@@ -1,5 +1,5 @@
 FROM buildpack-deps:trusty
-MAINTAINER Henrik Feldt
+LABEL maintainer "Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>"
 
 # See http://download.mono-project.com/repo/debian/dists/wheezy/snapshots/
 ENV MONO_VERSION 4.8.0.495
