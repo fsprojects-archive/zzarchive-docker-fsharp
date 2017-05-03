@@ -2,7 +2,7 @@
 
 F# is a cross-platform, functional programming language. It features a strong
 type system, type inference, type providers and a lot of the niceties of OCaml.
-These Docker images lets you get started with F# quickly and build applications
+These Docker images let you get started with F# quickly and build applications
 based on F#.
 
 The `mono` image contains the latest mono version with F#, whereas the `core`
