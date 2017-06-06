@@ -13,7 +13,7 @@ RUN MONO_VERSION=4.8.1.0 && \
     apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
     echo "deb http://download.mono-project.com/repo/debian wheezy/snapshots/$MONO_VERSION main" > /etc/apt/sources.list.d/mono-xamarin.list && \
     apt-get update -y && \
-    apt-get --no-install-recommends install -y autoconf libtool pkg-config make git automake curl nuget mono-devel ca-certificates-mono && \
+    apt-get --no-install-recommends install -y pkg-config nuget mono-devel ca-certificates-mono && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /tmp/src && \
     cd /tmp/src && \
@@ -24,8 +24,7 @@ RUN MONO_VERSION=4.8.1.0 && \
     make && \
     make install && \
     cd ~ && \
-    rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local && \
-    apt-get purge -y autoconf libtool make git automake curl
+    rm -rf /tmp/src /tmp/NuGetScratch ~/.nuget ~/.config ~/.local
 
 WORKDIR /root
 CMD ["fsharpi"]
