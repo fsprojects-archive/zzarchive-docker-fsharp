@@ -3,7 +3,7 @@ LABEL maintainer "Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmo
 
 ENV MONO_THREADS_PER_CPU 50
 RUN MONO_VERSION=5.0.1.1 && \
-    FSHARP_VERSION=4.1.24 && \
+    FSHARP_VERSION=4.1.25 && \
     FSHARP_PREFIX=/usr && \
     FSHARP_GACDIR=/usr/lib/mono/gac && \
     FSHARP_BASENAME=fsharp-$FSHARP_VERSION && \
