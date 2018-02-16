@@ -2,8 +2,8 @@ FROM debian:jessie-slim
 LABEL maintainer "Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>"
 
 ENV MONO_THREADS_PER_CPU 50
-RUN MONO_VERSION=5.4.1.6 && \
-    FSHARP_VERSION=4.1.29 && \
+RUN MONO_VERSION=5.8.0.108 && \
+    FSHARP_VERSION=4.1.34 && \
     FSHARP_PREFIX=/usr && \
     FSHARP_GACDIR=/usr/lib/mono/gac && \
     FSHARP_BASENAME=fsharp-$FSHARP_VERSION && \
