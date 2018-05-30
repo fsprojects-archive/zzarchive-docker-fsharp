@@ -30,7 +30,7 @@ a fix – which means you benefit from lower image sizes.
 
 ## .NET Core Image
 * .NET Core 1.1.1 Runtime
-* .NET Core 1.0.1 SDK
+* .NET Core 2.1.104 SDK
 
 # CMD
 
