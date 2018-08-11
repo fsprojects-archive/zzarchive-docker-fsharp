@@ -29,7 +29,7 @@ a fix – which means you benefit from lower image sizes.
 * Mono 5.8
 
 ## .NET Core Image
-* .NET Core 2.1.104 SDK
+* .NET Core 2.1.302 SDK
 
 # CMD
 
