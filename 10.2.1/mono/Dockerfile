@@ -13,8 +13,9 @@ RUN MONO_VERSION=5.14.0.177 && \
     echo "deb https://download.mono-project.com/repo/debian stretch/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list && \
     apt-get install -y apt-transport-https && \
     apt-get update -y && \
-    apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono && \
+    apt-get --no-install-recommends install -y pkg-config make nuget mono-devel msbuild ca-certificates-mono locales && \
     rm -rf /var/lib/apt/lists/* && \
+    echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen && \
     mkdir -p /tmp/src && \
     cd /tmp/src && \
     printf "namespace a { class b { public static void Main(string[] args) { new System.Net.WebClient().DownloadFile(\"%s\", \"%s\");}}}" $FSHARP_ARCHIVE_URL $FSHARP_ARCHIVE > download-fsharp.cs && \
