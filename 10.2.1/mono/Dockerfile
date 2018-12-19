@@ -9,7 +9,7 @@ RUN MONO_VERSION=5.14.0.177 && \
     FSHARP_ARCHIVE_URL=https://github.com/fsharp/fsharp/archive/$FSHARP_VERSION.tar.gz && \
     export GNUPGHOME="$(mktemp -d)" && \
     apt-get update && apt-get --no-install-recommends install -y gnupg dirmngr && \
-    apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
+    apt-key adv --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
     echo "deb https://download.mono-project.com/repo/debian stretch/snapshots/$MONO_VERSION main" | tee /etc/apt/sources.list.d/mono-official-stable.list && \
     apt-get install -y apt-transport-https && \
     apt-get update -y && \
