@@ -26,10 +26,10 @@ a fix – which means you benefit from lower image sizes.
 # Dependency versions used:
 
 ## Mono Image
-* Mono 5.8
+* Mono 5.14.0.177
 
 ## .NET Core Image
-* .NET Core 2.1.104 SDK
+* .NET Core 2.1.201 SDK
 
 # CMD
 
