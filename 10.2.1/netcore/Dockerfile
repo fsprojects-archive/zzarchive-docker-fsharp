@@ -21,9 +21,9 @@ RUN apt-get update && \
     libuuid1 \
     zlib1g && \
     rm -rf /var/lib/apt/lists/*
-RUN DOTNET_SDK_VERSION=2.1.401 && \
+RUN DOTNET_SDK_VERSION=2.2.202 && \
     DOTNET_SDK_DOWNLOAD_URL=https://dotnetcli.blob.core.windows.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz && \
-    DOTNET_SDK_DOWNLOAD_SHA=639f9f68f225246d9cce798d72d011f65c7eda0d775914d1394df050bddf93e2886555f5eed85a75d6c72e9063a54d8aa053c64c326c683b94e9e0a0570e5654 && \
+    DOTNET_SDK_DOWNLOAD_SHA=14f5c0e6fbb874a882334e0d500e494b01d7f363028e72db58dfff6db43c54670533539dcf6b8f50a97ce1e099119a8286ce84e193b361d65b1fd8c7dffce63d && \
     curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz && \
     echo "$DOTNET_SDK_DOWNLOAD_SHA dotnet.tar.gz" | sha512sum -c - && \
     mkdir -p /usr/share/dotnet && \
