@@ -2,7 +2,7 @@ FROM debian:stretch-slim
 LABEL maintainer "Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>"
 
 ENV MONO_THREADS_PER_CPU 50
-RUN MONO_VERSION=5.14.0.177 && \
+RUN MONO_VERSION=5.18.1 && \
     FSHARP_VERSION=10.2.1 && \
     FSHARP_BASENAME=fsharp-$FSHARP_VERSION && \
     FSHARP_ARCHIVE=$FSHARP_VERSION.tar.gz && \
