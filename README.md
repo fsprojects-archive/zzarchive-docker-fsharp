@@ -26,10 +26,10 @@ a fix – which means you benefit from lower image sizes.
 # Dependency versions used:
 
 ## Mono Image
-* Mono 5.14.0.177
+* Mono 5.20.1.19
 
 ## .NET Core Image
-* .NET Core 2.1.401 SDK
+* .NET Core 2.2.203 SDK
 
 # CMD
 
@@ -43,8 +43,8 @@ You can get an FSharp interactive session by simply running the fsharp image:
 ```
 # docker run -it fsharp
 
-F# Interactive for F# 4.1
-Freely distributed under the Apache 2.0 Open Source License
+Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+Copyright (c) Microsoft Corporation. All Rights Reserved.
 
 For help type #help;;
 
@@ -59,8 +59,8 @@ write a short snippet to a Test.fs file, compile it, and then run it.
 ```
 # docker run -it fsharp bash -c "echo 'let [<EntryPoint>] main argv = printfn \"Hello from FSharp in Docker\"; 0' > Test.fs && fsharpc Test.fs && mono Test.exe"
 
-F# Compiler for F# 4.1
-Freely distributed under the Apache 2.0 Open Source License
+Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+Copyright (c) Microsoft Corporation. All Rights Reserved.
 Hello from FSharp in Docker
 ```
 
@@ -83,8 +83,8 @@ Program.fs
 
 # docker run -it --rm --volume `pwd`:/src fsharp bash -c "cd /src; fsharpc Program.fs && mono Program.exe"
 
-F# Compiler for F# 4.1
-Freely distributed under the Apache 2.0 Open Source License
+Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+Copyright (c) Microsoft Corporation. All Rights Reserved.
 
 Perimeter of Circle 2.2 = 27.646015
 Perimeter of Triangle (3.0,4.6,2.8) = 10.400000
@@ -124,8 +124,9 @@ Perimeter of Square 9.1 = 36.400000
 ```
 
 ## Core Image
-The entry point for the `core` image in `/bin/bash` as there is no interactive
+The entry point for the `core` image is also `fsharpi` as there is no interactive
 F# REPL available for .NET Core at this time.
 
 Without a REPL, the primary use cases for the `core` image are building .NET
 Core applications or using it as a base for another image.
+
