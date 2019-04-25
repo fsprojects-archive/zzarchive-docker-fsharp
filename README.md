@@ -100,9 +100,13 @@ such as the following:
 ```
 FROM fsharp
 
-ADD Program.fs src/
-RUN cd src && fsharpc Program.fs
-ENTRYPOINT ["mono", "/root/src/Program.exe"] 
+WORKDIR /app
+
+COPY Program.fs /app
+
+RUN fsharpc Program.fs
+
+ENTRYPOINT ["mono", "/app/Program.exe"] 
 ```
 
 This Dockerfile will copy the Program.fs file from the current directory into
