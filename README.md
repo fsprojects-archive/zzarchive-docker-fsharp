@@ -23,6 +23,15 @@ image which translates to lower storage-costs and quicker deploys. When that
 bug hits the fan, you want to be able to quickly roll back your version or push
 a fix – which means you benefit from lower image sizes.
 
+# Installation
+
+Once Docker is installed on your machine, type: ```docker pull fsharp``` as root. 
+
+## Docker service on Linux
+
+When ```Cannot connect to the Docker daemon at {..} Is the docker daemon running?``` appears:        
+Run ```systemctl start docker``` in order to start it. In order to autostart the docker service, use ```systemctl enable docker```.
+
 # Dependency versions used:
 
 ## Mono Image
