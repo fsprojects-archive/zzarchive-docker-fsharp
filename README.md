@@ -25,12 +25,12 @@ a fix – which means you benefit from lower image sizes.
 
 # Installation
 
-Once Docker is installed on your machine, type: ```docker pull fsharp``` as root. 
+Once Docker is installed on your machine, type: `docker pull fsharp` as root. 
 
 ## Docker service on Linux
 
-When ```Cannot connect to the Docker daemon at {..} Is the docker daemon running?``` appears:        
-Run ```systemctl start docker``` in order to start it. In order to autostart the docker service, use ```systemctl enable docker```.
+When `Cannot connect to the Docker daemon at {..} Is the docker daemon running?` appears:        
+Run `systemctl start docker` in order to start it. In order to autostart the docker service, use `systemctl enable docker`.
 
 # Dependency versions used:
 
