@@ -35,24 +35,36 @@ Run `systemctl start docker` in order to start it. In order to autostart the doc
 # Dependency versions used:
 
 ## Mono Image
-* Mono 5.20.1.19
+* Mono 6.4.0.198
 
 ## .NET Core Image
-* .NET Core 2.2.203 SDK
+* .NET Core 3.0.100 SDK
 
 # CMD
 
 ## Mono Image
 The starting command for the `mono` image is `fsharpi` so running the image
-will result in an F# interactive REPL.
+will result in an F# interactive REPL running on the mono runtime.
+
+After F# 10.2.3, the F# compiler switched to being built with the .NET Core SDK.
+Because the mono fork of msbuild is behind, it doesn't support all of the features
+of the .NET Core SDK that are necessary to build newer versions of the compiler.
+As a result, the mono SDK image is still built with the older F# 10.2.3 compiler, 
+supporting the F# 4.5 language.
+
+## .NET Core Image
+The starting command for the `netcore` image is `dotnet fsi` so running the image
+will result in an F# interactive REPL running on the .NET Core runtime.  This
+image includes the mono SDK as needed for some tooling, but is primarily used for
+targeting .NET Core.
 
 ### Usage
 
-You can get an FSharp interactive session by simply running the fsharp image:
+You can get an FSharp interactive session by simply running the `fsharp` or `fsharp:netcore` image:
 ```
-# docker run -it fsharp
+# docker run -it fsharp:netcore
 
-Microsoft (R) F# Interactive version 10.2.3 for F# 4.5
+Microsoft (R) F# Interactive version 10.6.0.0 for F# 4.7
 Copyright (c) Microsoft Corporation. All Rights Reserved.
 
 For help type #help;;
@@ -135,11 +147,3 @@ Perimeter of Circle 2.2 = 27.646015
 Perimeter of Triangle (3.0,4.6,2.8) = 10.400000
 Perimeter of Square 9.1 = 36.400000
 ```
-
-## Core Image
-The entry point for the `core` image is also `fsharpi` as there is no interactive
-F# REPL available for .NET Core at this time.
-
-Without a REPL, the primary use cases for the `core` image are building .NET
-Core applications or using it as a base for another image.
-
