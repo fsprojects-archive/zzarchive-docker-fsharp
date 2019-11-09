@@ -1,4 +1,4 @@
-FROM fsharp:10.2.3
+FROM fsharp:10.6.0
 LABEL maintainer "Dave Curylo <dave@curylo.org>, Steve Desmond <steve@stevedesmond.ca>"
 
 ENV FrameworkPathOverride /usr/lib/mono/4.7.2-api/
