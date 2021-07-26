@@ -1,4 +1,12 @@
-# F# Docker Images
+# F# Docker Images (ARCHIVED)
+
+Please use these instead
+
+* [microsoft-dotnet](https://hub.docker.com/_/microsoft-dotnet) 
+
+
+
+## Old material (ARCHIVED)
 
 F# is a cross-platform, functional programming language. It features a strong
 type system, type inference, type providers and a lot of the niceties of OCaml.
@@ -23,7 +31,7 @@ image which translates to lower storage-costs and quicker deploys. When that
 bug hits the fan, you want to be able to quickly roll back your version or push
 a fix – which means you benefit from lower image sizes.
 
-# Installation
+# Installation (ARCHIVED)
 
 Once Docker is installed on your machine, type: `docker pull fsharp` as root. 
 
